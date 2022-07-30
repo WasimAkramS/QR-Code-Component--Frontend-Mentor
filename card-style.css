@@ -1,0 +1,54 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+    font-size: 15px;
+    background-color: hsl(212, 45%, 89%);
+}
+
+/* Here I am creating an outer div and set it's height to viewport height so that the inner
+   div can be centered within the viewport (i.e. vertically) because without height the div
+   takes only its content height, so inner div cannot be centered vertically. */
+
+.flex-container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+/* We can use position method to center the card horizantally and vertically. But
+   it removes the card from the normal document flow and put it in a new layer, 
+   so the footer content comes to the top because there is no other element in it's layer */
+
+.container {
+/*  position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    width: 300px;
+    background-color: hsl(0, 0%, 100%);
+    padding:10px ;
+    text-align: center;
+    border-radius: 15px;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+p {
+    color: hsl(220, 15%, 55%);
+    font-size: 1rem;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
